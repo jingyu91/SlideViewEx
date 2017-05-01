@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="slideViewEx" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="UUT-nm-sQW" id="yYG-VX-wtk"/>
+                <outlet property="menuTableView" destination="VOv-li-Orv" id="QzF-cW-TTH"/>
+                <outlet property="menuTableViewLeading" destination="Q69-Kv-pnq" id="0Ci-KM-b0U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-nm-sQW">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="afx-es-30N" appends="YES" id="Oa1-RS-shT"/>
+                    </connections>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VOv-li-Orv">
+                    <rect key="frame" x="0.0" y="20" width="281.5" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VOv-li-Orv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="BGY-EE-EVR"/>
+                <constraint firstItem="UUT-nm-sQW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CYC-QN-8Ie"/>
+                <constraint firstAttribute="bottom" secondItem="VOv-li-Orv" secondAttribute="bottom" id="MPe-m0-DdD"/>
+                <constraint firstItem="VOv-li-Orv" firstAttribute="width" secondItem="UUT-nm-sQW" secondAttribute="width" multiplier="3:4" id="PhR-Ta-wLk"/>
+                <constraint firstItem="VOv-li-Orv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q69-Kv-pnq"/>
+                <constraint firstAttribute="bottom" secondItem="UUT-nm-sQW" secondAttribute="bottom" id="RsN-8S-Ti3"/>
+                <constraint firstAttribute="trailing" secondItem="UUT-nm-sQW" secondAttribute="trailing" id="gGj-OK-ln2"/>
+                <constraint firstItem="UUT-nm-sQW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="so1-E7-aje"/>
+            </constraints>
+        </view>
+        <tapGestureRecognizer id="afx-es-30N">
+            <connections>
+                <action selector="tapView:" destination="-1" id="Zoc-qo-mf5"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
